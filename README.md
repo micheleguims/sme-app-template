@@ -1,6 +1,6 @@
 # Manual de Aplicativos React — SME
 
-Manual navegável e base inicial para aplicativos React com JavaScript da SME. Usa Next.js App Router, componentes reutilizáveis e a identidade visual do [Design System & UI Guidelines](https://design-guidelines-gsd.netlify.app/). O [protótipo de chamados](https://www.figma.com/design/C2OEzNxfn86X4ODNO9uO9n/Prot%C3%B3tipo?node-id=1-8) serve como exemplo de aplicação do layout.
+Manual navegável e base inicial para aplicativos React com JavaScript da SME. Usa Next.js App Router, componentes reutilizáveis e a identidade visual do [Design System & UI Guidelines](https://design-guidelines-gsd.netlify.app/).
 
 O manual é público dentro do ambiente em que for hospedado. Não contém login, API, banco nem dados reais. **Copiar este repositório não torna um novo aplicativo pronto para tratar dados pessoais**: autenticação, autorização, retenção, backups e implantação precisam ser definidos e testados para cada produto.
 

@@ -35,9 +35,9 @@ export const chapters = [
     sections: [
       {
         title: "Fundamentos visuais",
-        text: "Use os tokens de cor, tipografia, espaçamento e borda definidos no projeto. O guia de design da equipe é a referência para valores e estados; o protótipo de chamados mostra a aplicação deles em uma tela administrativa.",
+        text: "Use os tokens de cor, tipografia, espaçamento e borda definidos no projeto. O guia de design da equipe é a referência para valores e estados.",
         bullets: ["Títulos em Manrope e texto de interface em Roboto Flex, com fontes alternativas locais.", "Azul institucional para navegação e ação principal; cores semânticas para sucesso, aviso e erro.", "Comece pela escala de espaçamento e pela grade responsiva antes de ajustar medidas pontuais."],
-        sources: [{ label: "Design System & UI Guidelines", url: "https://design-guidelines-gsd.netlify.app/" }, { label: "Protótipo Figma", url: "https://www.figma.com/design/C2OEzNxfn86X4ODNO9uO9n/Prot%C3%B3tipo?node-id=1-8" }],
+        sources: [{ label: "Design System & UI Guidelines", url: "https://design-guidelines-gsd.netlify.app/" }],
       },
       {
         title: "Componentes e estados",
