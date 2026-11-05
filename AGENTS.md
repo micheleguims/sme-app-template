@@ -20,3 +20,15 @@ Estas regras valem para todo código, mesmo que o pedido não fale em segurança
 - **Dados reais:** use apenas dados fictícios em exemplos, testes e demonstrações. Não registre em logs ou mensagens de erro dados pessoais, tokens ou detalhes internos.
 - **Dados de crianças e adolescentes:** colete só o necessário. Se o app for tratar dados reais, avise que ele precisa de revisão de segurança e de análise com a área responsável antes de ser publicado.
 - **Limite:** seguir estas regras não garante que o app esteja seguro. Não afirme que ele está seguro; diga o que foi verificado e o que falta verificar.
+
+## Apps em PHP
+
+Este template é em React, mas as regras acima valem também para PHP, adaptando o que for específico de Next.js. Em PHP, siga também estas:
+
+- **Banco de dados:** nunca monte consultas juntando texto digitado pela pessoa. Use consultas preparadas.
+- **Senhas e configurações:** mantenha arquivos como `.env` fora da pasta pública.
+- **Senhas de usuários:** guarde sempre com `password_hash`, nunca como texto puro, e confira com `password_verify`.
+- **Conteúdo na tela:** trate o que a pessoa digitou com `htmlspecialchars` antes de exibir em HTML.
+- **Arquivos enviados:** guarde fora da pasta pública, para que não possam ser executados.
+- **Mensagens de erro:** desligue `display_errors` no site publicado e registre os erros em log.
+- **Atualizações:** mantenha o PHP e seus pacotes em versões que ainda recebem correções de segurança.

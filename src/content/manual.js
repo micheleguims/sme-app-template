@@ -154,7 +154,7 @@ export const chapters = [
     label: "Segurança e LGPD",
     icon: "shield",
     title: "Proteja os dados em cada camada",
-    description: "Identidade, autorização, entradas, arquivos e operação precisam funcionar em conjunto.",
+    description: "Identidade, autorização, entradas, arquivos e operação precisam funcionar em conjunto. Estas regras valem também para apps em PHP.",
     sections: [
       {
         title: "Dados de crianças e adolescentes",
@@ -178,6 +178,20 @@ export const chapters = [
         title: "Operação segura",
         text: "Use HTTPS, proxy reverso, segredos fora do repositório, usuário de banco com privilégios mínimos, backups testados e registros de eventos sem dados sensíveis. Revise dependências e teste permissões antes de cada publicação.",
         sources: [{ label: "Next.js · self-hosting", url: "https://nextjs.org/docs/app/guides/self-hosting" }, { label: "OWASP · Logging", url: "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html" }],
+      },
+      {
+        title: "Apps em PHP",
+        text: "Este manual e o template são em React, mas as regras de acesso e de dados desta página valem igualmente para PHP. Além delas, evite os erros mais graves e comuns nesse tipo de app:",
+        bullets: [
+          "Banco de dados: nunca monte consultas juntando texto digitado pela pessoa, pois isso permite invasão pelo banco (SQL injection). Use consultas preparadas.",
+          "Senhas e configurações: mantenha arquivos como .env fora da pasta pública, pois um erro de configuração pode permitir que sejam baixados pelo navegador.",
+          "Senhas de usuários: guarde sempre com password_hash, nunca como texto puro, e confira com password_verify.",
+          "Conteúdo na tela: trate o que a pessoa digitou com htmlspecialchars antes de exibir em HTML, para que um código malicioso não rode na página.",
+          "Arquivos enviados: guarde fora da pasta pública, para que um arquivo malicioso não possa ser executado.",
+          "Mensagens de erro: desligue a exibição de erros no site publicado (display_errors), pois elas revelam detalhes internos. Registre os erros em log.",
+          "Atualizações: mantenha o PHP e seus pacotes em versões que ainda recebem correções de segurança.",
+        ],
+        sources: [{ label: "OWASP · SQL Injection", url: "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html" }, { label: "OWASP · configuração do PHP", url: "https://cheatsheetseries.owasp.org/cheatsheets/PHP_Configuration_Cheat_Sheet.html" }, { label: "PHP · password_hash", url: "https://www.php.net/manual/pt_BR/function.password-hash.php" }, { label: "PHP · versões com suporte", url: "https://www.php.net/supported-versions.php" }],
       },
     ],
   },
