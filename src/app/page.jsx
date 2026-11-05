@@ -15,7 +15,7 @@ export default function HomePage() {
         <div className="home-hero__copy">
           <p className="kicker"><BookOpen size={15} aria-hidden="true" /> BASE DE DESENVOLVIMENTO · SME</p>
           <h1>Um ponto de partida para os próximos aplicativos da rede.</h1>
-          <p>Um manual vivo de interface, React, arquitetura e segurança. Consulte os padrões, explore os componentes e use a estrutura deste repositório para começar um novo produto.</p>
+          <p>Um manual de interface, React, arquitetura e segurança. Consulte os padrões, explore os componentes e use a estrutura deste repositório para começar um novo produto.</p>
           <div className="home-hero__actions"><Link className="hero-button" href="/fundamentos">Começar a leitura <ArrowRight size={18} aria-hidden="true" /></Link><Link className="hero-link" href="/componentes">Explorar componentes</Link></div>
         </div>
         <div className="home-hero__visual" aria-hidden="true">

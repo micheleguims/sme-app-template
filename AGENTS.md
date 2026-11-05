@@ -7,3 +7,16 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+# Regras de segurança para qualquer app criado a partir deste projeto
+
+Estas regras valem para todo código, mesmo que o pedido não fale em segurança. O detalhamento está em `src/content/manual.js`, nos capítulos `seguranca`, `integracoes` e `arquitetura`.
+
+- **Segredos:** nunca escreva senhas, chaves ou tokens no código, em `public/` ou em variáveis `NEXT_PUBLIC_`. Eles ficam em variáveis de ambiente do servidor, fora do repositório.
+- **Permissões:** esconder um botão, menu ou página não protege nada. Verifique no servidor ou na API quem pode acessar cada registro e ação, inclusive anexos, e negue por padrão.
+- **Dados enviados à tela:** mande ao navegador só os campos que a tela usa. Tudo o que chega ao navegador pode ser visto pela pessoa usuária.
+- **Armazenamento no navegador:** não guarde tokens, sessões ou dados escolares em `localStorage`.
+- **Entradas:** trate tudo o que vem de fora como não confiável e valide no servidor, mesmo que o formulário já valide. Isso inclui arquivos enviados.
+- **Dados reais:** use apenas dados fictícios em exemplos, testes e demonstrações. Não registre em logs ou mensagens de erro dados pessoais, tokens ou detalhes internos.
+- **Dados de crianças e adolescentes:** colete só o necessário. Se o app for tratar dados reais, avise que ele precisa de revisão de segurança e de análise com a área responsável antes de ser publicado.
+- **Limite:** seguir estas regras não garante que o app esteja seguro. Não afirme que ele está seguro; diga o que foi verificado e o que falta verificar.

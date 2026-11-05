@@ -56,7 +56,7 @@ export const chapters = [
     slug: "componentes",
     label: "Componentes",
     icon: "blocks",
-    title: "Kit de interface copiável",
+    title: "Kit de componentes de interface",
     description: "Blocos pequenos e configuráveis para manter a aparência e o comportamento consistentes.",
     sections: [
       {
@@ -133,7 +133,7 @@ export const chapters = [
       {
         title: "API interna",
         text: "Centralize a URL, o tratamento de respostas e o acesso a dados em módulos de servidor. A API precisa validar o token destinado a ela e autorizar a operação sobre o recurso específico. Defina limites, timeouts e mensagens públicas que não revelem detalhes internos.",
-        bullets: ["Diferencie falha de autenticação (401), falta de permissão (403) e recurso inexistente (404).", "Valide formato, tamanho e valores recebidos na API, mesmo quando o formulário já valida.", "Para dados pessoais, revise a estratégia de cache e evite resposta reutilizável entre usuários."],
+        bullets: ["Diferencie falha de autenticação (401) de falta de permissão (403). Se a pessoa não pode saber que um registro existe, responda 404 em vez de 403.", "Valide formato, tamanho e valores recebidos na API, mesmo quando o formulário já valida.", "Para dados pessoais, revise a estratégia de cache e evite resposta reutilizável entre usuários."],
         sources: [{ label: "OWASP · REST Security", url: "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html" }, { label: "Next.js · fetch e cache", url: "https://nextjs.org/docs/app/api-reference/functions/fetch" }],
       },
       {
@@ -159,6 +159,7 @@ export const chapters = [
       {
         title: "Dados de crianças e adolescentes",
         text: "Mapeie a finalidade e a base legal com a área responsável, colete apenas o necessário e avalie o melhor interesse de crianças e adolescentes em cada tratamento. O manual usa apenas dados fictícios; um app real precisa de análise de risco e governança próprias.",
+        note: "Este manual orienta, mas não garante a segurança de um aplicativo nem cobre todos os riscos. Um app com dados reais precisa de revisão de segurança própria antes de ser publicado.",
         sources: [{ label: "ANPD · crianças e adolescentes", url: "https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-divulga-enunciado-sobre-o-tratamento-de-dados-pessoais-de-criancas-e-adolescentes" }, { label: "ANPD · Poder Público", url: "https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia_orientativo_tratamento_de_dados_pessoais_pelo_poder_publico" }],
       },
       {
@@ -209,7 +210,7 @@ export const chapters = [
       {
         title: "Preparar",
         text: "Copie o repositório, ajuste nome, domínio, responsáveis e documentação. Execute a aplicação localmente e retire do novo produto as páginas de manual que não façam parte dele.",
-        code: "npm install\nnpm run dev -- --port 5174\nnpm run check\nnpm run build\nnpm run start",
+        code: "npm install\nnpm run dev -- --port 5174\nnpm run check\nnpm run start",
         note: "Next.js usa a porta 3000 por padrão. Ajuste a porta de desenvolvimento ou produção conforme o ambiente.",
       },
       {
